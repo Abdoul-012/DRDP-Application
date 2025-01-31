@@ -1,0 +1,36 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.program-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+.table th {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+.btn-primary, .btn-danger {
+    border-radius: 25px;
+}
+.btn-primary:hover {
+    background-color: #1b7a63;
+}
+.progress-bar {
+    background-color: #2a9d8f;
+}
+.progress-title {
+    color: #264653;
+    font-weight: bold;
+}
+.header-title {
+    font-weight: bold;
+    color: #264653;
+    margin-bottom: 15px;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}

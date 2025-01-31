@@ -1,0 +1,197 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.input-group-text {
+    border: none;
+}
+
+.input-group-text {
+    background-color: #2a9d8f; /* Fond vert clair */
+    color: #fff; /* Texte blanc */
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.input-group-text:hover {
+    background-color: #264653; /* Fond vert foncé au survol */
+    color: #e9c46a; /* Texte jaune pour plus de contraste */
+}
+
+
+
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+.styled-title-simple {
+    font-family: 'Poppins', sans-serif; /* Police moderne et élégante */
+    font-size: 2.5rem; /* Taille légèrement réduite pour plus de sobriété */
+    font-weight: 700; /* Plus épais pour mettre en avant le titre */
+    color: #2a9d8f; /* Couleur verte cohérente avec la navbar */
+    text-transform: capitalize; /* Pas de majuscules forcées */
+    letter-spacing: 1px; /* Espacement subtil pour l'équilibre */
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #e9c46a; /* Ligne dorée décorative */
+    display: inline-block; /* Pour que la ligne ne prenne que la largeur du texte */
+    padding-bottom: 0.3rem; /* Espacement entre le texte et la ligne */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Animation fluide au survol */
+}
+
+.styled-title-simple:hover {
+    color: #264653; /* Change la couleur du texte au survol */
+    border-color: #2b3945; /* Change la couleur de la ligne au survol */
+}
+/* Icône flèche pour indiquer une liste déroulante */
+.input-group .dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajuste la position pour aligner avec le design */
+    transform: translateY(-50%);
+    pointer-events: none; /* Évite que l'icône interfère avec l'interaction utilisateur */
+    font-size: 1rem;
+    color: #2a9d8f;
+}
+
+/* Apparence visuelle pour la liste déroulante */
+/* Apparence élégante pour la liste déroulante */
+.filter-select {
+    border: 2px solid #2a9d8f;
+    border-radius: 5px;
+    background-color: #f4f9f4;
+    color: #2b3945;
+    font-size: 1rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Icône de filtre à gauche */
+.filter-icon {
+    background-color: #e9c46a;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.2rem;
+}
+
+/* Interaction au focus */
+.filter-select:focus {
+    border-color: #e9c46a;
+    box-shadow: 0 0 5px rgba(233, 196, 106, 0.8);
+    outline: none;
+}
+
+/* Placeholder style */
+.filter-select option[disabled] {
+    color: #b1b1b1;
+}
+
+/* Suppression de l'apparence native des sélects pour uniformiser */
+.filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%232b3945" viewBox="0 0 20 20"><path d="M10 12l-4-4h8l-4 4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1rem;
+    padding-right: 2rem; /* Espace pour l'icône de flèche */
+}
+
+/* Titre principal */
+.styled-title-simple {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #264653;
+    margin-bottom: 1.5rem;
+}
+
+/* Barre de recherche et filtres */
+.search-filter-bar .search-bar,
+.search-filter-bar .filter-select {
+    border: 2px solid #2a9d8f;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-filter-bar .search-bar:focus,
+.search-filter-bar .filter-select:focus {
+    border-color: #e9c46a;
+    box-shadow: 0 0 8px rgba(233, 196, 106, 0.5);
+    outline: none;
+}
+
+.search-filter-bar .search-icon,
+.search-filter-bar .filter-icon {
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.btn-search {
+    background-color: #2a9d8f;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-search:hover {
+    background-color: #e9c46a;
+    transform: translateY(-2px);
+}
+
+/* Cartes */
+.card {
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-body {
+    background-color: #f9fafb;
+}
+
+.card-footer {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/styles/f.css}">
+</head>
+<body>
+<footer th:fragment="footer" style="background-color: #2b3945; color: white; padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo et présentation -->
+            <div class="col-md-4">
+                <a class="navbar-brand" th:href="@{/home/accueil}">
+                    <i class="fas fa-heartbeat"></i> Activités Santé
+                </a>
+                <p class="mt-3">
+                    Activités Santé vous accompagne pour trouver des activités physiques adaptées à votre bien-être. Rejoignez-nous pour une vie plus active et équilibrée.
+                </p>
+            </div>
+            <!-- Liens utiles -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Liens utiles</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/accueil" style="color: #f8f9fa;">Accueil</a></li>
+                    <li><a href="/activites" style="color: #f8f9fa;">Activités</a></li>
+                    <li><a href="/recommandations" style="color: #f8f9fa;">Recommandations</a></li>
+                    <li><a href="/profil" style="color: #f8f9fa;">Profil utilisateur</a></li>
+                    <li><a href="/faq" style="color: #f8f9fa;">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Contact</h5>
+                <p>Email : <a href="mailto:contact@activites-sante.fr" style="color: #f8f9fa;">contact@activites-sante.fr</a></p>
+                <p>Téléphone : <a href="tel:+330123456789" style="color: #f8f9fa;">+33 0 12 34 56 78</a></p>
+                <form id="contact" action="/contact" method="POST" class="mt-3">
+                    <input type="email" name="email" placeholder="Votre email" class="form-control mb-2" required>
+                    <textarea name="message" placeholder="Votre message" class="form-control mb-2" required></textarea>
+                    <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Réseaux sociaux -->
+            <div class="col-md-6">
+                <p>&copy; 2025 Activités Santé. Tous droits réservés.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <a href="https://facebook.com" class="text-white mx-2" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://twitter.com" class="text-white mx-2" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://instagram.com" class="text-white mx-2" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles/inscription.css}">
+    <link rel="stylesheet" th:href="@{/styles/nav.css}">
+    <link rel="stylesheet" th:href="@{/styles/f.css}">
+    <title>Inscription - Activités Santé</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div th:replace="navbare.html :: navbare"></div>
+<div class="container d-flex justify-content-center">
+    <div class="form-container">
+        <h2 class="form-title">Inscription</h2>
+
+        <form th:action="@{/inscription/new}" th:object="${utilisateur}" th:method="post">
+            <!-- Ligne 1 -->
+            <div class="form-row mb-3">
+                <div class="form-group">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="nom" th:field="*{nom}" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="prenom" th:field="*{prenom}" placeholder="Votre prénom" required>
+                </div>
+            </div>
+            <!-- Ligne 2 -->
+            <div class="form-row mb-3">
+                <div class="form-group">
+                    <label for="genre" class="form-label">Genre</label>
+                    <select class="form-control" id="genre" th:field="*{genre}" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="form-label">Âge</label>
+                    <input type="number" class="form-control" id="age" th:field="*{age}" placeholder="Votre âge" required>
+                </div>
+            </div>
+            <!-- Ligne 3 -->
+            <div class="form-row mb-3">
+                <div class="form-group">
+                    <label for="pathologie" class="form-label">Pathologie</label>
+                    <input type="text" class="form-control" id="pathologie" th:field="*{pathologie}" placeholder="Exemple : Diabète" required>
+                </div>
+                <div class="form-group">
+                    <label for="taille" class="form-label">Taille (cm)</label>
+                    <input type="number" class="form-control" id="taille" th:field="*{taille}" placeholder="Votre taille en cm" required>
+                </div>
+            </div>
+            <!-- Ligne 4 -->
+            <div class="form-row mb-3">
+                <div class="form-group">
+                    <label for="poid" class="form-label">Poids (kg)</label>
+                    <input type="number" class="form-control" id="poid" th:field="*{poid}" placeholder="Votre poids en kg" required>
+                </div>
+                <div class="form-group">
+                    <label for="login" class="form-label">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="login" th:field="*{login}" placeholder="Votre nom d'utilisateur" required>
+                </div>
+            </div>
+            <!-- Ligne 5 -->
+            <div class="form-row mb-3">
+                <div class="form-group">
+                    <label for="md" class="form-label">Mot de Passe</label>
+                    <input type="password" class="form-control" id="md" th:field="*{mdp}" placeholder="Votre mot de passe" required>
+                </div>
+            </div>
+            <!-- Bouton d'envoi -->
+            <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
+        </form>
+    </div>
+</div>
+<div th:replace="footer.html :: footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

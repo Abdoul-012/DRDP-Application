@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <title>Liste des Activités</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Liste des Activités</h1>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Catégorie</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Boucle Thymeleaf -->
+                <tr th:each="activite : ${activites}">
+                    <td th:text="${activite.id}"></td>
+                    <td th:text="${activite.nom}"></td>
+                    <td th:text="${activite.description}"></td>
+                    <td th:text="${activite.categorie}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

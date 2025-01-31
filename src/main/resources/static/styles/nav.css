@@ -1,0 +1,17 @@
+.navbar {
+    background-color: #2a9d8f;
+    margin-bottom: 20px;
+}
+.navbar a {
+    color: #fff !important;
+}
+.navbar .nav-link:hover {
+    color: #e9c46a !important;
+}
+.isv{
+    color: #2b3945;
+}
+.container-fluid{
+
+    z-index: 45;
+ }
